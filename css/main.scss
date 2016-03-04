@@ -1375,6 +1375,14 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
+	.no-csstransforms body.is-menu-visible #menu  {
+	  display: block;
+	}
+
+	.no-csstransforms #menu  {
+	  display: none;
+	}
+
 /* Header */
 
 	#header {
