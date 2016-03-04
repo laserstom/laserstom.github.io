@@ -54,7 +54,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		font-family: _font(family);
 		font-size: 15pt;
 		font-weight: _font(weight);
-		letter-spacing: _size(letter-spacing);
+		letter-spacing: _size(letter-spacing) * 1.5;
 		line-height: 1.65em;
 
 		@include breakpoint(xlarge) {
@@ -67,7 +67,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 		@include breakpoint(small) {
 			font-size: 11pt;
-			letter-spacing: _size(letter-spacing) * 0.5;
+			letter-spacing: _size(letter-spacing);
 		}
 	}
 
