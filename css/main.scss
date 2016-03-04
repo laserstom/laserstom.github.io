@@ -1377,10 +1377,12 @@ $baseurl: '{{ site.baseurl }}/images';
 
 	.no-csstransforms body.is-menu-visible #menu  {
 	  display: block;
+	  width: 20em;
 	}
 
 	.no-csstransforms #menu  {
 	  display: none;
+	  width: 0;
 	}
 
 /* Header */
