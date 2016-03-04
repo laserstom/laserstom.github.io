@@ -1,0 +1,33 @@
+{% include base.html %}
+<!-- Scripts -->
+<script src="{{base}}/js/jquery.min.js"></script>
+<script src="{{base}}/js/jquery.scrollex.min.js"></script>
+<script src="{{base}}/js/jquery.scrolly.min.js"></script>
+<script src="{{base}}/js/skel.min.js"></script>
+<script src="{{base}}/js/util.js"></script>
+<!--[if lte IE 8]>
+<script src="{{base}}/js/ie/respond.min.js"></script><![endif]-->
+<script src="{{base}}/js/main.js"></script>
+<script>
+    function initMap() {
+        var mapDiv = document.getElementById('map');
+        if (mapDiv !== null) {
+            var map = new google.maps.Map(mapDiv, {
+                center: {lat: 49.565697, lng: 34.528520},
+                zoom: 17,
+                /*draggable: false,*/
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 49.565697, lng: 34.528520},
+                map: map,
+                title: '{{ site.title }}'
+            });
+            $(".map-overlay").click(function () {
+                $(".map-overlay").hide();
+            });
+        }
+    }
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap&language=ru" async defer></script>
