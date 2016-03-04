@@ -830,6 +830,8 @@ $baseurl: '{{ site.baseurl }}/images';
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+	  	max-width: 100%;
+	  	text-overflow: ellipsis;
 
 		&:hover {
 			background-color: _palette(border-bg);
@@ -1867,11 +1869,11 @@ $baseurl: '{{ site.baseurl }}/images';
       }
 
         @include breakpoint(medium) {
-        @include padding(0, 3em);
+        @include padding(0, 1em);
       }
 
       @include breakpoint(small) {
-        @include padding(0, 2em);
+		padding: 0;
       }
     }
 
@@ -1881,7 +1883,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		text-align: center;
 		display: block;
 	  }
-
+	  padding-bottom: 2em;
 	}
 
 	.inner {
