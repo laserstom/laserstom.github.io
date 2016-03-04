@@ -1375,15 +1375,20 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
-	.no-csstransforms body.is-menu-visible #menu  {
-	  display: block;
-	  width: 20em;
-	}
+body.is-menu-visible #menu {
+  @include breakpoint(small) {
+	display: block;
+	width: 20em;
+  }
 
-	.no-csstransforms #menu  {
-	  display: none;
-	  width: 0;
-	}
+}
+
+#menu {
+  @include breakpoint(small) {
+	display: none;
+	width: 0;
+  }
+}
 
 /* Header */
 
