@@ -1307,7 +1307,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		right: 0;
 		top: 0;
 		width: 20em;
-		z-index: -1;//_misc(z-index-base) + 2;
+		z-index: _misc(z-index-base) + 2;
 
 		ul {
 			list-style: none;
@@ -1371,12 +1371,11 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		#menu {
-		  	z-index: _misc(z-index-base) + 2;
 			@include vendor('transform', 'translateX(0)');
 		}
 	}
 
-/*body.is-menu-visible #menu {
+body.is-menu-visible #menu {
   @include breakpoint(small) {
 	display: block;
 	width: 20em;
@@ -1389,7 +1388,7 @@ $baseurl: '{{ site.baseurl }}/images';
 	display: none;
 	width: 0;
   }
-}*/
+}
 
 /* Header */
 
