@@ -30,4 +30,4 @@
 
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?callback=initMap&language=ru" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap{% if page.lang == "en" %}{% else %}&language=ru{% endif %}" async defer></script>
