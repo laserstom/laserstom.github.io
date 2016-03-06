@@ -1887,6 +1887,7 @@ $baseurl: '{{ site.baseurl }}/images';
 	}
 
 	.inner {
+	  position: relative;
 	  img {
 		max-width: 100%;
 	  }
@@ -1907,3 +1908,35 @@ $baseurl: '{{ site.baseurl }}/images';
 	.PageNavigation{
 	  padding-top: 2em;
 	}
+
+#header {
+  .lang {
+	i {
+	  margin-left: 0.35em;
+	  font-size: 1.24em;
+	}
+
+	span {
+
+	}
+
+	a {
+	  padding-right: 1em;
+	}
+  }
+
+  .special {
+	a {
+	  padding-left: 1em;
+	}
+  }
+}
+
+.lang {
+  display: none !important;
+}
+
+.alt .lang {
+  display: inline-block !important;
+}
+

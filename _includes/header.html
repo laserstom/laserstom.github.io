@@ -1,24 +1,33 @@
 <!-- Header -->
 <header id="header"{% if page.layout == 'landing' %} class="alt"{% endif %}>
+  {% if page.lang == "en" %}
+  <h1><a href="{{ site.baseurl }}/en.html"><i class="fi flaticon-tooth-outline-1"></i> Laser Dentistry</a></h1>
+  {% else %}
   <h1><a href="{{ site.baseurl }}/index.html"><i class="fi flaticon-tooth-outline-1"></i> {{ site.title }}</a></h1>
+  {% endif %}
   <nav id="nav">
     <ul>
+      {% if page.lang == "en" %}
+      <li class="lang"><a href="/">RU <span><i class="fa fa-flag"></i></span></a></li>
+      {% else %}
+      <li class="lang"><a href="/en.html">EN <span><i class="fa fa-flag"></i></span></a></li>
       <li class="special">
         <a href="#menu" class="menuToggle"><span>Меню</span></a>
         <div id="menu">
           <ul>
-            <li><a href="/index.html">Главная</a></li>
+            <li><a href="/">Главная</a></li>
             {% for my_page in site.pages %}
             {% if my_page.title %}
             <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
             {% endif %}
             {% endfor %}
-            <li><a href="/index.html#call-to-doctor">Записаться на прием</a></li>
+            <li><a href="/#call-to-doctor">Записаться на прием</a></li>
             <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}"
-                   class="icon fa-feed"> RSS Лента</a></li>
+              class="icon fa-feed"> RSS Лента</a></li>
           </ul>
         </div>
       </li>
+      {% endif %}
     </ul>
   </nav>
 </header>
