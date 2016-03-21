@@ -10,17 +10,23 @@
       {% if page.lang == "en" %}
       <li class="lang"><a href="/">RU <span><i class="fa fa-flag"></i></span></a></li>
       {% else %}
-      <li class="lang"><a href="/en.html">EN <span><i class="fa fa-flag"></i></span></a></li>
+      <li class="lang"><a href="/en.html">ENG <span><i class="fa fa-flag"></i></span></a></li>
       <li class="special">
-        <a href="#menu" class="menuToggle"><span>Меню</span></a>
+
+
+        <a class="show-large" href="/#three">Услуги</a>
+        <a class="show-large" href="/price.html">Цены</a>
+        <a class="show-large" href="/#one">О нас</a>
+        <a class="show-large" href="#contacts">Контакты</a>
+
+        <a href="#menu" class="menuToggle"><span class="hide-large">Меню</span></a>
         <div id="menu">
           <ul>
             <li><a href="/">Главная</a></li>
-            {% for my_page in site.pages %}
-            {% if my_page.title %}
-            <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
-            {% endif %}
-            {% endfor %}
+            <li><a href="/uslugi.html">Услуги</a></li>
+            <li><a href="/price.html">Цены</a></li>
+            <li><a href="/about.html">О нас</a></li>
+            <li><a href="/articles.html">Статьи</a></li>
             <li><a href="/#call-to-doctor">Записаться на прием</a></li>
             <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}"
               class="icon fa-feed"> RSS Лента</a></li>

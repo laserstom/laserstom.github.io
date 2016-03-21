@@ -21,6 +21,7 @@
 			$body = $('body'),
 			$wrapper = $('#page-wrapper'),
 			$banner = $('#banner'),
+			$bannerh2 = $('#banner h2'),
 			$header = $('#header');
 
 		// Disable animations/transitions until the page has loaded.
@@ -86,8 +87,8 @@
 
 				$window.on('resize', function() { $window.trigger('scroll'); });
 
-				$banner.scrollex({
-					bottom:		$header.outerHeight() + 1,
+				$bannerh2.scrollex({
+					bottom:		$header.outerHeight() + 80,
 					terminate:	function() { $header.removeClass('alt'); },
 					enter:		function() { $header.addClass('alt'); },
 					leave:		function() { $header.removeClass('alt'); }
