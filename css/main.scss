@@ -532,7 +532,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 		&.left,
 		&.right {
-			max-width: 40%;
+			max-width: 50%;
 
 			img {
 				width: 100%;
@@ -750,7 +750,12 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		td {
-			padding: 0.75em 0.75em;
+			padding: 0.25em 0.75em;
+		  	span {
+			  color: #000;
+			  display: block;
+			  text-align: center;
+			}
 		}
 
 		th {
@@ -1993,6 +1998,30 @@ $baseurl: '{{ site.baseurl }}/images';
   &:active {
 	background-color: rgb(22, 207, 201) !important;
   }
+}
+
+.fa-2 {
+  font-size: 1.2em;
+}
+.fa-3 {
+  font-size: 1.4em;
+}
+.fa-4 {
+  font-size: 1.6em;
+}
+.fa-5 {
+  font-size: 1.8em;
+}
+.fa-6 {
+  font-size: 2em;
+}
+.fa-1,
+.fa-2,
+.fa-3,
+.fa-4,
+.fa-5,
+.fa-6 {
+  margin-right: 0.25em;
 }
 
 
