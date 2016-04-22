@@ -1,5 +1,5 @@
 <!-- Header -->
-<header id="header"{% if page.layout == 'landing' %} class="alt"{% endif %}>
+<header id="header"{% if (page.layout == 'landing' or page.layout == 'landingen' ) %} class="alt"{% endif %}>
   
   {% if page.lang == "en" %}
   <h1><a href="{{ site.baseurl }}/en.html"><i class="fi flaticon-tooth-outline-1"></i> Laser Dentistry</a></h1>
@@ -13,7 +13,7 @@
   <nav id="nav">
     <ul>
       {% if page.lang == "en" %}
-      <li class="lang"><a href="/">RU <span><i class="fa fa-flag"></i></span></a></li>
+      <li class=""><a href="/">RU <span><i class="fa fa-flag"></i></span></a></li>
       {% else %}
       <li class="lang"><a href="/en.html">ENG <span><i class="fa fa-flag"></i></span></a></li>
       <li class="special">
