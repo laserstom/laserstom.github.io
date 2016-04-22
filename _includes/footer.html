@@ -1,6 +1,9 @@
 {% if page.lang == "en" %}
 {% else %}
 <!-- Contacts -->
+    {% if page.layout == "page" %}
+      <aside>
+    {% endif %}
 <section id="contacts" class="wrapper alt style1">
   <section class="spotlight">
     <div class="image map-overlay-wrap">
@@ -36,6 +39,9 @@
     </div>
   </section>
 </section>
+    {% if page.layout == "page" %}
+      </aside>
+    {% endif %}
 {% endif %}
 
 <!-- Footer -->
