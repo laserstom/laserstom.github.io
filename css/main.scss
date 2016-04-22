@@ -1393,13 +1393,19 @@ $baseurl: '{{ site.baseurl }}/images';
 		width: 100%;
 		z-index: _misc(z-index-base);
 
-		h1 {
+		h1, p {
 			@include vendor('transition', 'opacity #{_duration(transitions)} ease');
 			height: inherit;
 			left: 1.25em;
 			line-height: inherit;
 			position: absolute;
 			top: 0;
+			
+			color: #fff;
+			font-weight: 800;
+			letter-spacing: 0.075em;
+			margin: 0 0 1em 0;
+			text-transform: uppercase;
 
 			a {
 				border: 0;

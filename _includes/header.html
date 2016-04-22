@@ -1,9 +1,14 @@
 <!-- Header -->
 <header id="header"{% if page.layout == 'landing' %} class="alt"{% endif %}>
+  
   {% if page.lang == "en" %}
   <h1><a href="{{ site.baseurl }}/en.html"><i class="fi flaticon-tooth-outline-1"></i> Laser Dentistry</a></h1>
   {% else %}
-  <h1><a href="{{ site.baseurl }}/"><i class="fi flaticon-tooth-outline-1"></i> {{ site.title }}</a></h1>
+    {% if page.layout == "page" %}
+      <p><a href="{{ site.baseurl }}/"><i class="fi flaticon-tooth-outline-1"></i> {{ site.title }}</a></p>
+    {% else %}
+      <h1><a href="{{ site.baseurl }}/"><i class="fi flaticon-tooth-outline-1"></i> {{ site.title }}</a></h1>
+    {% endif %}
   {% endif %}
   <nav id="nav">
     <ul>
