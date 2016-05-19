@@ -5,14 +5,22 @@
   {% if page.lang == "en" %}
   <title>Laser Dentistry - Dental Clinic in Poltava Ukraine</title>
   {% else %}
-  <title>{% if page.title %}{{ page.title | escape }} - Полтава{% else %}Стоматология Полтава - клиника "Лазерная стоматология"{% endif %}</title>
+  
+		<!-- Если установлен метатитл то выводить его -->
+	  {% if page.metatitle %}
+		<title>{{ page.metatitle | escape }}</title>
+	  {% else %}
+		<!-- Если нет то титл страницы строится на базе title + слова Стоматология Полтава, если же page.title нет то просто Стоматология Полтава - клиника "Лазерная стоматология" -->
+	  <title>{% if page.title %}{{ page.title | escape }} - Стоматология Полтава{% else %}Стоматология Полтава - клиника "Лазерная стоматология"{% endif %}</title>
+	  {% endif %}
+  
   {% endif %}
 
   {% if page.url == "/404.html" %}
   <meta http-equiv="refresh" content="5; url=/">
   {% endif %}
 
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <!--[if lte IE 8]><script src="{{ "/js/ie/html5shiv.js" | prepend: site.baseurl }}"></script><![endif]-->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
