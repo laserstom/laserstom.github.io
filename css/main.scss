@@ -2049,4 +2049,14 @@ $baseurl: '{{ site.baseurl }}/images';
 	height:100%;
 }
 
+.video-container.right{
+	width: 50%;
+}
+
+@media screen and (min-width: 1024px) {
+	.video-container.right{
+		width: 100%;
+	}
+}
+
 
