@@ -2058,11 +2058,8 @@ $baseurl: '{{ site.baseurl }}/images';
 		width: 100%;
 	}
 	
-	.image.right{
-		width: 100%;
-	}
-	.image.left{
-		width: 100%;
+	.image.left, .image.right {
+	    max-width: 100%;
 	}
 }
 
