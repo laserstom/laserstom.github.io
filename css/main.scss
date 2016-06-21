@@ -2060,6 +2060,9 @@ $baseurl: '{{ site.baseurl }}/images';
 	
 	.image.left, .image.right {
 	    max-width: 100%;
+	    float: none;
+	    margin-left: 0;
+	    margin-right: 0;
 	}
 }
 
