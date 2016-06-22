@@ -1939,6 +1939,8 @@ $baseurl: '{{ site.baseurl }}/images';
 
 	.PageNavigation{
 	  padding-top: 2em;
+	  width: 100%;
+	  clear: both;
 	}
 
 #header {
